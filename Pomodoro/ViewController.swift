@@ -69,6 +69,7 @@ class ViewController: UIViewController {
         let (minutes, seconds) = minutesAndSeconds(from: timeRemaining)
         let min = formatNumber(minutes)
         let sec = formatNumber(seconds)
+        print("\(min) : \(sec)")
         timeLabel.text = "\(min) : \(sec)"
     }
     
@@ -132,7 +133,7 @@ class ViewController: UIViewController {
     
     func startTimer() {
         //ACTION: create the timer, selector should be runTimer()
-        timer = Timer(timeInterval: 1.0, target: self, selector: #selector(runTimer), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(runTimer), userInfo: nil, repeats: true)
     }
     
     @objc func runTimer() {

@@ -31,7 +31,7 @@ class FirstViewController: UIViewController {
         // ACTION: Update value of completed cycles
         completedCycles += 1
         // ACTION: Update message label
-        messageLabel.text = "\(completedCycles)"
+        messageLabel.text = "\(completedCycles) pomodoro cycles completed today"
         
     }
 }
